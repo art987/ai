@@ -139,8 +139,9 @@
   word-wrap: break-word;
   margin-bottom: 4px;
   padding-top: 5px;
-  width: 42px;
+  width: 88px;
   text-align: left;
+  margin-right: 8px;
 }
 
 
@@ -148,11 +149,12 @@
     border: none;
     color: #ccc;
     font-size: 28px;
-    width: 141px;
+    width: 137px;
     line-height: 52px;
     text-align: left;
     display: inline;
     padding-right: 36px;
+    margin-right: 8px;
 }
 .tab-content{
   position:

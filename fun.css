@@ -33,9 +33,9 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
             position: absolute;
             /*字体的位置*/
             right: 0px;
-            top: 54px;
+            top: -5px;
             background: #f1f1f1;
-            height: 896px;
+            height: 945px;
             width: 248px;
             border-left: 1px solid #ccdc;
             border-bottom: 1px solid #ccdc;
@@ -47,10 +47,12 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
 		
 		#nftcloth  #disappear{ display:none;}
 		.b_h1{
-    background: #373737;
+    background: #e3e3e3;
     height: 30px;
-    color: #fff;    margin: 10px 0;
+    color: #000;
+    margin: 10px 0;
     line-height: 30px;
+    font-size: 20px;
 }
 		.b_h2{
     height: 29px;
@@ -116,16 +118,18 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
 .tab-item{
   display:
   block;
-  height: 60px;
+  height: 52px;
   line-height: 20px;
   cursor:
   pointer;
   padding:0 10px
 ;
   font-size: 16px;
+  word-wrap: break-word;
   margin-bottom: 4px;
-  padding-top: 5px;
-  width: 32px;
+  padding-top: 9px;
+  width: 39px;
+  text-align: left;
 }
 
 .tab-content{
@@ -193,6 +197,7 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
 .purple{ background:#663399}
 
 .head{
+
     width: 900px;
     margin: 7px auto 10px;
     clear: both;
@@ -238,7 +243,7 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
 }
 .head_r a:hover{}
 
-.original_btn{position: absolute;height: 54px;line-height: 35px;text-align: left;width: 272px;background: #f1f1f1;top: 0px;right: 0;border-bottom: 1px solid #ccc;z-index: 999;}
+.original_btn{position: absolute;height: 54px;line-height: 35px;text-align: left;width: 272px;background: #f1f1f1;top: 0px;right: 0;border-bottom: 1px solid #ccc;z-index: 999; display:none;}
 .original_btn b{}
 .original_btn button{
     cursor:
