@@ -114,9 +114,11 @@
 #nftcloth a img{
     margin-top: -53px;
 }
+
+
+
 .tabs{
-  position:
-  relative;
+  position:relative;
   height: 193px;
 }
 .tab-pane{float: left;}
@@ -194,6 +196,8 @@
     background: none;
 }
 
+
+
 #nftbg .content_in{
     width: 1010px;
     background: none;
@@ -231,7 +235,7 @@
 .head h2{
     display: block;
     float: left;
-    width: 540px;
+    width: 580px;
     padding-left: 22px;
     font-size: 39px;
     color: #fff;
@@ -403,7 +407,7 @@
     }
 	
 .hair_bin{
-    height: 855px;
+    height: 1170px;
 }	
 
 .head_r .nft_home{width: 137px;color: #fff;border: 1px solid #ffffff;font-weight: normal;background: #303030;text-shadow: none;margin-right: 16px;}
