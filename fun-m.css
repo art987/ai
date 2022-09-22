@@ -141,6 +141,16 @@
   margin-left: 10px;
 }
 
+#face .tab-item {
+    border: none;
+    color: #ccc;
+    font-size: 28px;
+    width: 141px;
+    line-height: 52px;
+    text-align: left;
+    display: inline;
+    padding-right: 36px;
+}
 .tab-content{
   position:
   absolute;

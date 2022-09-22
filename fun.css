@@ -117,12 +117,14 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
   display:
   block;
   height: 60px;
-  line-height:34px;
+  line-height: 20px;
   cursor:
   pointer;
   padding:0 10px
 ;
+  font-size: 16px;
   margin-bottom: 4px;
+  padding-top: 5px;
   width: 32px;
 }
 
@@ -138,7 +140,7 @@ body{background: linear-gradient(#d7f5ff 30%, #ffffff 100%)  no-repeat;}
   background:#fff;
 }
 
-.tabs input[type='radio']:checked+.tab-item{/**导航选中状态**/
+.tabs input[type='radio']:checked+.tab-item{/**导航选中状态**/ font-weight:bold;
 
 }
 .tabs input[type='radio']:checked+.tab-item+.tab-content{/**当前内容切换**/
