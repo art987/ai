@@ -55,7 +55,7 @@
 			 height: -moz-calc(100% - 350px);
              height: -webkit-calc(100% - 350px);*/
             overflow-y: scroll;
-            height: calc(100% - 360px);
+            height: calc(100% - 306px);
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
         }
@@ -172,10 +172,10 @@ line-height: 24px;
     font-size: 15px;}
 #timer-text{
     margin: 5px 30px 10px;
-    font-size: 15px;
+    font-size: 16px;
     color: #44f424;
     line-height: 61px;
-    top: 75px;
+    top: 47px;
     left: 0px;
     position: absolute;
     height: 81px;
@@ -260,7 +260,7 @@ line-height: 24px;
     }
 #iframe { width:400px; height:200px; }
 .inputbox_in{width:100%;border: 1px solid #ccc;border-radius: 5px;height: 45px;position: relative;    background: #fff;}
-#clear{background:none;border:none;font-size:18px;width: 35px;display: block;height: 45px;position: absolute;right: 5px;}
+#clear{background:none;border:none;font-size:18px;width: 35px;display: block;color: #ff0b0b;height: 45px;position: absolute;right: 5px;}
 .title{color: #b7ff39;
     height: 142px;
     padding-left: 10px;
