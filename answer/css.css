@@ -1,6 +1,10 @@
-﻿	body{ 
-	background-size: 242px; 
-	background-repeat: no-repeat; background-color: #000;background-position: -32px 16px;padding: 0 10px;}
+﻿	body{
+	background-size: 378px;
+	background-repeat: no-repeat;
+	background-color: #000;
+	background-position: left 13px;
+	padding: 0 10px;
+	}
 	
 	
 
@@ -37,8 +41,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 700px;
             position: relative;
             padding-top: 16px;
+            margin: 0 auto;
         }
 
         .input-box {
@@ -53,15 +59,21 @@
 
         .answer-button {
           background-color: #e41313;
-    color: white;
-    padding: 9px 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
-    font-size: 20px;
-    font-family: 'Poiret One', cursive;
-    text-shadow: 0 0 8px #fff100;
+          color: white;
+          padding: 9px 11px;
+          cursor: pointer;
+          border-radius: 5px;
+          width: 191px;
+          margin-top: 10px;
+          border: none;
+          position: absolute;
+          font-size: 20px;
+          float: left;
+          font-family: 'Poiret One', cursive;
+          text-shadow: 0 0 8px #fff100;
+          right: 0;
+          top: -10px;
+          height: 46px;
         }
 .answer-button:hover{ background:#CC0000; color:#fff;}
         .question-button {      background-color: #ededed00;
@@ -80,10 +92,11 @@
 
         .error-message {
             color: red;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: left;
-    width: 100%;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: left;
+            position: absolute;
+            width: 100%;
         }
 
         .modal {
@@ -195,15 +208,20 @@
     left: 20px;
     }
 #iframe { width:400px; height:200px; }
-.inputbox_in{width:100%;border: 1px solid #ccc;border-radius: 5px;height: 45px;position: relative;    background: #fff;}
+.inputbox_in{width: 500px;border: 1px solid #ccc;border-radius: 5px;height: 45px;position: relative;background: #fff;}
 #clear{background:none;border:none;font-size:18px;width: 35px;display: block;height: 45px;position: absolute;right: 5px;}
-.title{color: #b7ff39;
+.title{
+    color: #b7ff39;
     height: 142px;
-    padding-left: 10px;
-    width: 100%;}
-.title h1 {    font-size: 32px; letter-spacing:2px;
+    padding-left: 358px;
+    width: 100%;
+    }
+.title h1 {
+    font-size: 49px;
+    letter-spacing:2px;
     padding: 0;
-    line-height: 175px;}
+    line-height: 99px;
+    }
 #bookmark-button{ position: absolute;
     right: 10px;
     top: 10px;
