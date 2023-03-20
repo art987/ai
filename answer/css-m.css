@@ -63,17 +63,31 @@
 
         .answer-button {
 		
-          background-color: #e41313;
-    color: white;
-    padding: 9px 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
-    font-size: 20px;
-    font-family: 'Poiret One', cursive;
-    text-shadow: 0 0 8px #fff100;
-        }
+background-color: #171717;
+		
+color: #f80808;
+		
+padding: 9px 18px;
+		
+cursor: pointer;
+		
+border-radius: 5px;
+		
+font-weight: bold;
+		
+border: 1px solid #9a0a0a;
+		
+margin-top: 10px;
+		
+/* border: none; */
+		
+font-size: 20px;
+		
+font-family: 'Poiret One', cursive;
+		
+text-shadow: 0 0 8px #ce4646;
+		
+}
 .answer-button:hover{ background:#CC0000; color:#fff;}
         .question-button {
    
@@ -143,25 +157,30 @@ line-height: 24px;
 
          .modal-content {
             background-color: #131313;
-    margin: auto;
-    border: 1px dotted #3ea668;
-    width: 90%;
-    height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 27px #035c7a;
+            margin: auto;
+            border: 1px dotted #3ea668;
+            width: 90%;
+            position: relative;
+            height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 27px #035c7a;
          }  
 #question-text{margin: 30px 30px 5px;
    
     color: #fff;
     text-shadow: 0 0 9px #69f2e8;line-height: 26px;
     font-size: 15px;}
-#timer-text{margin: 5px 30px 10px;
+#timer-text{
+    margin: 5px 30px 10px;
     font-size: 15px;
     color: #44f424;
     line-height: 61px;
+    top: 75px;
+    left: 0px;
     position: absolute;
     height: 81px;
-    text-shadow: 0 0 5px #25ee0d;}
+    text-shadow: 0 0 5px #25ee0d;
+    }
 #answer-text{margin: 7px 30px 10px;font-size: 34px;line-height: 40px;position: relative;top: 0px;height: 63px; font-family: 'Metal Mania', cursive;animation: neon 1s ease infinite;
     -moz-animation: neon 1s ease infinite;
     -webkit-animation: neon 1s ease infinite;}
@@ -190,15 +209,15 @@ line-height: 24px;
 
          .another-answer-button {
     background-color: #171818cf;
-    color: #0cd5c4;
+    color: #fd0404;
     padding:12px 13px;
-    border: 1px solid #163272;
+    border: 1px solid #802318;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 19px;
     cursor: pointer;
     font-family: 'Metal Mania', cursive;
-    text-shadow: 0 0 8px #48e04d;
+    text-shadow: 0 0 8px #ff4505;
     }
            .another-answer-question {    background-color: #0f1417;
     color: #03adff;
@@ -211,15 +230,17 @@ line-height: 24px;
     text-shadow: 0 0 8px #1ad5ff;
     }
          .inputstyle{
-    height: 42px; color:#000;
+    height: 42px;
+    color: #f40202;
     border: none;
     border-radius: 6px;
     width: 91%;
     text-indent:10px;
     font-size:16px;
     float: left;
+    font-weight: bold;
     display: block;
-    margin: 1px 0; 
+    margin: 1px 0;
     }
 
 .btblouc{display: flex;
@@ -365,12 +386,13 @@ line-height: 24px;
     top: 19px;
     width: 127px;
     background: none;
-    color: #0f835e;
+    color: #813b03;
     font-size: 13px;
     border-radius: 5px;
     font-family: 'Poiret One', cursive;
     line-height: 20px;
     text-align: right;
+    text-shadow: 0 0 2px #ffde00;
     }
 	
 	
@@ -378,7 +400,7 @@ line-height: 24px;
     z-index: 999;
     display: none;
     position: absolute;
-    top: -34px;
+    top: -50px;
     left: 135px;
     transform: translate(-50%, -50%);
     padding: 10px;
