@@ -306,11 +306,14 @@ line-height: 24px;
   background-color: pink;}	
   
   
-.hotrecom{height: 28px;
-    line-height: 32px;
-    color: #9d9b9b; }  
+.hotrecom{
+    height: 28px;
+    line-height: 16px;
+    color: #b3b3b3;
+    font-size: 13px;
+    }  
   .scroll-container {
-   height: calc(100% - 60px);
+   height: calc(100% - 81px);
    overflow: hidden;
    width: 90%;
    flex-direction: column;
