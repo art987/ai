@@ -160,9 +160,9 @@ line-height: 24px;
             border: 1px dotted #505050;
             width: 90%;
             position: relative;
-            height: 90%;
+            height: 94%;
             border-radius: 12px;
-            box-shadow: 0 0 27px #295fd7;
+            box-shadow: 0 0 27px #26465e;
          }  
 #question-text{margin: 30px 30px 5px;
    
@@ -254,7 +254,7 @@ line-height: 24px;
     padding-bottom: 11px;}
 .iframe{
     width: 100%;
-    height: calc(100% - 240px);
+    height: calc(100% - 211px);
     border: none;
     position: relative;
     overflow: hidden;
