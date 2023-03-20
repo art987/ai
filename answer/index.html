@@ -183,24 +183,11 @@
      
      
 
-    
-    
-    //定义一个函数，处理再来一个答案按钮的点击事件
-    function handleAnotherAnswerClick() {
-         
-         startTimer();
-         
-    }
-    
-    //定义一个函数，处理问其它问题按钮的点击事件
-    function handleOtherQuestionClick() {
-         
-         hideModal();
-         
-         setInputValue("");
-         
-    }
-    
+
+
+	
+	
+	
 	//定义一个函数，清除答案文本
      function clearAnswerText() {
 
@@ -214,10 +201,24 @@
           document.getElementById("question-text").innerHTML = "";
 
      }
+	 
+	 //定义弹框
+	 
+	 function showPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+  setTimeout(function() {
+    popup.style.display = "none";
+  },5000);
+}
+	 
+	 
+	
+	 
      
      //定义一个函数，处理再来一个答案按钮的点击事件
      function handleAnotherAnswerClick() {
-         
+          showPopup();
          clearAnswerText();
       //   var iframe = document.getElementById("iframe"); iframe.src = iframe.src; // refresh the iframe
          startTimer();
@@ -235,6 +236,9 @@
          setInputValue("");
          
     }
+	
+
+    
 
     //定义一个函数，处理关闭按钮的点击事件
     function handleCloseClick() {
@@ -248,21 +252,13 @@
 	
 //定义一个函数，处理答案按钮的点击事件
      function handleAnswerClick() {
-
           var value = getInputValue();
-
           if (value == "") {
-
                showErrorMessage("Enter your question sincerely...");
-
           } else {
-
                clearErrorMessage();
-
                showModal();
-
                setModalContent(value, ""); //设置问题文本，答案文本为空
-
                startTimer();
 
           }
@@ -335,10 +331,13 @@
              <!-- 底部按钮 -->
              <div class="btblouc"> 
                   <!-- 再来一个答案按钮 -->
-                  <button class="another-answer-button"  onclick="handleAnotherAnswerClick()">Another Answer</button> 
+                  <button class="another-answer-button"   onclick="handleAnotherAnswerClick()">One More Answer</button> 
                   <!-- 问其它问题按钮 -->
-                  <button class="another-answer-question" onClick="handleOtherQuestionClick()">Another Question</button> 
+                  <button class="another-answer-question"  onClick="handleOtherQuestionClick()">Re-question</button> 
+				  <div id="popup">The first three is the most close.</div>
+				  
               </div> 
+			  
 			  
 			  
 			  <div class="iframe">

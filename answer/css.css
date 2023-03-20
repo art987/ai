@@ -88,7 +88,7 @@
    color: #cfcfcf;
    line-height: 24px;
    }
-		.question-button:hover{  background-color: #ededed10;}
+		.question-button:hover{  background-color: #ededed10; color:#fd1a1a}
 
         .error-message {
             color: red;
@@ -133,7 +133,7 @@
    }
 #timer-text{
     margin: 5px auto 10px;
-    font-size: 15px;
+    font-size: 22px;
     color: #44f424;
     line-height: 61px;
     position: absolute;
@@ -141,11 +141,12 @@
     width: 150px;
     left: 260px;
     height: 81px;
+    /* text-decoration: underline; */
     text-shadow: 0 0 5px #25ee0d;
     }
 #answer-text{
     margin: 7px 30px 10px;
-    font-size: 49px;
+    font-size: 45px;
     line-height: 69px;
     position: relative;
     top: 0px;
@@ -203,15 +204,17 @@
     text-shadow: 0 0 8px #1ad5ff;
     }
          .inputstyle{
-    height: 42px; color:#000;
+    height: 42px;
+    color: #ff3800;
     border: none;
     border-radius: 6px;
     width: 91%;
+    font-weight: bold;
     text-indent:10px;
-    font-size:16px;
+    font-size: 18px;
     float: left;
     display: block;
-    margin: 1px 0; 
+    margin: 1px 0;
     }
 
 .btblouc{
