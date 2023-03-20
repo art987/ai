@@ -129,7 +129,8 @@
    color: #fff;
    text-shadow: 0 0 9px #69f2e8;
    line-height: 26px;
-   font-size: 17px;
+       font-size: 19px;
+    font-family: 'Special Elite', cursive;
    }
 #timer-text{
     margin: 5px auto 10px;

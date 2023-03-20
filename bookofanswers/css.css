@@ -1,0 +1,367 @@
+﻿	body{
+	background-size: 500px;
+	background-repeat: no-repeat;
+	background-color: #000;
+	background-position: left 6px;
+	padding: 0 10px;font-family: 'wz';
+	}
+	
+	@font-face {
+	font-family:wz;
+	src:url( wz.otf);}
+
+	
+	.neon {
+  color: #FB4264;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+	
+	.neon b { letter-spacing:6px;}
+	.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+	
+	
+	
+	
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 700px;
+            position: relative;
+            padding-top: 16px;
+            margin: 0 auto;
+        }
+
+        .input-box {
+            margin: 10px;
+            width: 100%;
+            position: relative; 
+        }
+
+        .button-box {
+            margin: 10px 0;
+        }
+
+        .answer-button {
+          background-color: #e41313;
+          color: white;
+          padding: 9px 11px;
+          cursor: pointer;
+          border-radius: 5px;
+          width: 191px;
+          margin-top: 10px;
+          border: none;
+          position: absolute;
+          font-size: 20px;
+          float: left;
+          font-family: 'wz';
+          text-shadow: 0 0 8px #fff100;
+          right: 0;
+          top: -10px;
+          height: 46px;
+        }
+.answer-button:hover{ background:#CC0000; color:#fff;}
+        .question-button {
+   background-color: #0606069e;
+   padding: 5px 10px;
+   border-radius: 5px;
+   margin-right: 17px;
+   margin-bottom: 17px;
+   font-size: 15px;
+   border: 1px solid #45454566;font-family: 'wz';
+   cursor: pointer;
+   color: #cfcfcf;
+   line-height: 24px;
+   }
+		.question-button:hover{  background-color: #ededed10; color:#fd1a1a}
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: left;
+            position: absolute;
+            width: 100%;
+        }
+
+        .modal {
+               display: none;
+               position: fixed;
+               z-index: 1;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               overflow: auto;
+               background-color: #000000bd;
+               padding-top: 40px;
+               margin: 0;
+         }  
+
+         .modal-content {
+            background-color: #131313;
+            margin: auto;
+            border: 1px dotted #3ea668;
+            width: 700px;
+            height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 27px #035c7a;
+            position: relative;
+         }  
+#question-text{
+   text-align: center;
+   margin: 30px 30px 5px;
+   color: #fff;
+   text-shadow: 0 0 9px #69f2e8;
+   line-height: 26px;
+   font-size: 17px;
+   }
+#timer-text{
+    margin: 5px auto 10px;
+    font-size: 22px;
+    color: #44f424;
+    line-height: 61px;
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    left: 260px;
+    height: 81px;
+    /* text-decoration: underline; */
+    text-shadow: 0 0 5px #25ee0d;
+    }
+#answer-text{
+    margin: 7px 30px 10px;
+    font-size: 45px;
+    line-height: 69px;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    height: 63px;
+    font-family: 'wz', cursive;
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+    }
+         .close {  
+    color: #aaa;
+    float: right;
+    font-size: 31px;
+    font-weight: bold;
+    margin-right: 1px;
+    padding: 1px 10px;
+         }  
+
+         .close:hover ,.close:focus {  
+             color : black ;  
+             text-decoration : none ;  
+             cursor:pointer;   
+         }  
+
+         .answer-text {
+             font-size:x-large ;
+         }
+
+         .timer-text {
+             
+         }
+
+         .another-answer-button {
+    background-color: #9e1010cf;
+    color: #f8f8f8;
+    padding: 12px 14px;
+    border: 1px solid #a91010;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    text-shadow: 0 0 8px #da0000;    font-family: 'wz', cursive;
+    }
+           .another-answer-question {
+    background-color: #0f1417;    font-family: 'wz', cursive;
+    padding: 3px 15px;
+    border: 1px solid #104c69;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #15fff4;
+    cursor: pointer;
+    text-shadow: 0 0 8px #1ad5ff;
+    }
+         .inputstyle{
+    height: 42px;
+    color: #ff3800;
+    border: none;
+    border-radius: 6px;
+    width: 91%;
+    font-weight: bold;
+    text-indent:10px;
+    font-size: 18px;
+    float: left;
+    display: block;
+    margin: 1px 0;font-family: 'wz';
+    }
+
+.btblouc{
+    display: flex;
+    justify-content: left;
+    margin: 32px auto 6px;
+    position: relative;
+    top: 0;
+    padding-bottom: 11px;
+    width: 357px;
+    }
+.iframe{
+    width: 100%;
+    height: 366px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    left: 20px;
+    }
+#iframe { width:400px; height:200px; }
+.inputbox_in{width: 500px;border: 1px solid #ccc;border-radius: 5px;height: 45px;position: relative;background: #fff;}
+#clear{background:none;border:none;font-size:18px;width: 35px;display: block;height: 45px;position: absolute;right: 5px;}
+.title{
+    color: #b7ff39;
+    height: 142px;
+    padding-left: 358px;
+    width: 100%;
+    }
+.title h1 {
+    font-size: 64px;
+    letter-spacing:2px;
+    padding: 0;
+    line-height: 99px;
+	font-family: 'wz';
+    }
+#datetime{
+    position: absolute;
+    right: 1px;
+    top: 10px;
+    width: 157px;
+    background: none;
+    color: #723800;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 28px;
+    text-align: right;
+    text-shadow: 0 0 2px #ffde00;
+    }
+
+	
+  
+.hotrecom{
+    height: 38px;
+    line-height: 44px;
+    color: #9d9b9b;
+    }  
+  .scroll-container {
+   height: 299px;
+   overflow-y: scroll;
+   width: 670px;
+   flex-direction: column;
+}
+
+
+.scroll-container::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 12px;/*高宽分别对应横竖滚动条的尺寸*/
+        height: 9px;
+}
+.scroll-container::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius:5px;
+        -webkit-box-shadow: inset005pxrgba(0,0,0,0.2);
+        background: rgb(186 186 186 / 37%);  /*设置滚动条颜色*/
+        cursor: pointer;
+}
+.scroll-container::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset005pxrgba(0,0,0,0.2);
+        border-radius: 9px;
+        background: rgb(54 54 54 / 51%);
+}
+  
+  
+  .scroll-container a {
+   /*animation: scroll 30s infinite linear;*/
+   display: inline-block;
+   float: left;
+   font-size:17px;
+   text-decoration: none;
+   border: 1px solid #344e4e;
+   margin: 8px 4px 3px 0;
+   border-radius: 5px;
+   overflow:hidden;
+   line-height: 32px;
+   padding: 3px 8px;
+   background: #000000;
+   color: #fefefe;
+   height: 93px;
+   width: 298px;
+   text-shadow: 0 0 9px #69f2e8;
+   overflow: hidden;
+   font-family: 'Poiret One', cursive;
+   padding-bottom: 4px;
+   }
+	 .scroll-container a img {
+    width: 100px;
+    display: block;
+    margin-top: 5px;
+    float: left;
+}
+	 .scroll-container a h2{
+    display: block;
+    width: 155px;
+    font-size: 19px;
+    padding-left: 20px;
+    line-height: 30px;
+    float: left;
+    margin-top: 8px;
+}
+.more{
+    font-size: 13px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 39px;
+    color: #679d70;
+    height: 29px;
+    }
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-800%);
+  }
+}
+	
+	
+		#popup {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: -34px;
+    left: 175px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 250px;
+    color: #4a4a42;
+}
