@@ -1,6 +1,7 @@
-﻿	body{ 
-	background-size: 242px; 
-	background-repeat: no-repeat; background-color: #000;background-position: -32px 16px;padding: 0 10px;}
+﻿	html{ height:100%; padding:0; margin:0;}
+	body{ 
+	background-size: 242px; height:100%;
+	background-repeat: no-repeat; background-color: #000;background-position: -32px 16px;padding: 0 20px; margin:0;}
 	
 	
 
@@ -48,10 +49,20 @@
         }
 
         .button-box {
-            margin: 10px 0;
+            margin: 10px 0; 
+/*			  height:calc(100% - 350px);  
+			 height: -moz-calc(100% - 350px);
+             height: -webkit-calc(100% - 350px);*/
+			 overflow-y: scroll;
+			height: 260px;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+			   
         }
+		
 
         .answer-button {
+		
           background-color: #e41313;
     color: white;
     padding: 9px 18px;
@@ -64,7 +75,7 @@
     text-shadow: 0 0 8px #fff100;
         }
 .answer-button:hover{ background:#CC0000; color:#fff;}
-        .question-button {      background-color: #ededed00;
+        .question-button {  animation: scroll2 75s infinite linear; overflow:hidden; height:40px; text-align:left;     background-color: #ededed00;
    
     padding: 5px 10px;
     border-radius: 5px;
@@ -76,6 +87,17 @@
     color: #cfcfcf;
     line-height: 24px;
         }
+		
+			@keyframes scroll2 {
+			  0% {
+				transform: translateY(0);
+			  }
+			  
+			
+			  100% {
+				transform: translateY(-2150%);
+			  }
+			}
 		.question-button:hover{  background-color: #ededed10;}
 
         .error-message {
@@ -153,7 +175,7 @@
     border: 1px solid #a91010;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: 21px;
+    font-size: 19px;
     cursor: pointer;
     font-family: 'Metal Mania', cursive;
     text-shadow: 0 0 8px #da0000;

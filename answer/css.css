@@ -1,8 +1,8 @@
 ﻿	body{
-	background-size: 378px;
+	background-size: 500px;
 	background-repeat: no-repeat;
 	background-color: #000;
-	background-position: left 13px;
+	background-position: left 6px;
 	padding: 0 10px;
 	}
 	
@@ -76,18 +76,18 @@
           height: 46px;
         }
 .answer-button:hover{ background:#CC0000; color:#fff;}
-        .question-button {      background-color: #ededed00;
-   
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 17px;
-    margin-bottom: 17px;
-    font-size: 15px;
-    border: 1px solid #454545;
-    cursor: pointer;
-    color: #cfcfcf;
-    line-height: 24px;
-        }
+        .question-button {
+   background-color: #0606069e;
+   padding: 5px 10px;
+   border-radius: 5px;
+   margin-right: 17px;
+   margin-bottom: 17px;
+   font-size: 15px;
+   border: 1px solid #45454566;
+   cursor: pointer;
+   color: #cfcfcf;
+   line-height: 24px;
+   }
 		.question-button:hover{  background-color: #ededed10;}
 
         .error-message {
