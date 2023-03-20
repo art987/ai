@@ -115,28 +115,46 @@
 
          .modal-content {
             background-color: #131313;
-    margin: auto;
-    border: 1px dotted #3ea668;
-    width: 90%;
-    height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 27px #035c7a;
+            margin: auto;
+            border: 1px dotted #3ea668;
+            width: 700px;
+            height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 27px #035c7a;
          }  
-#question-text{margin: 30px 30px 5px;
-   
-    color: #fff;
-    text-shadow: 0 0 9px #69f2e8;line-height: 26px;
-    font-size: 17px;}
-#timer-text{margin: 5px 30px 10px;
+#question-text{
+   text-align: center;
+   margin: 30px 30px 5px;
+   color: #fff;
+   text-shadow: 0 0 9px #69f2e8;
+   line-height: 26px;
+   font-size: 17px;
+   }
+#timer-text{
+    margin: 5px auto 10px;
     font-size: 15px;
     color: #44f424;
     line-height: 61px;
     position: absolute;
+    text-align: center;
+    width: 150px;
+    left: 410px;
     height: 81px;
-    text-shadow: 0 0 5px #25ee0d;}
-#answer-text{margin: 7px 30px 10px;font-size: 34px;line-height: 40px;position: relative;top: 0px;height: 63px; font-family: 'Metal Mania', cursive;animation: neon 1s ease infinite;
+    text-shadow: 0 0 5px #25ee0d;
+    }
+#answer-text{
+    margin: 7px 30px 10px;
+    font-size: 49px;
+    line-height: 69px;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    height: 63px;
+    font-family: 'Metal Mania', cursive;
+    animation: neon 1s ease infinite;
     -moz-animation: neon 1s ease infinite;
-    -webkit-animation: neon 1s ease infinite;}
+    -webkit-animation: neon 1s ease infinite;
+    }
          .close {  
     color: #aaa;
     float: right;
@@ -160,23 +178,25 @@
              
          }
 
-         .another-answer-button {background-color: #9e1010cf;
+         .another-answer-button {
+    background-color: #9e1010cf;
     color: #f8f8f8;
-    padding: 12px 6px;
+    padding: 12px 14px;
     border: 1px solid #a91010;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: 21px;
+    font-size: 22px;
     cursor: pointer;
     font-family: 'Metal Mania', cursive;
     text-shadow: 0 0 8px #da0000;
     }
-           .another-answer-question {    background-color: #0f1417;
-    color: #03adff;
-    padding: 3px 9px;
+           .another-answer-question {
+    background-color: #0f1417;
+    padding: 3px 15px;
     border: 1px solid #104c69;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 22px;
+    color: #15fff4;
     cursor: pointer;
     font-family: 'Metal Mania', cursive;
     text-shadow: 0 0 8px #1ad5ff;
@@ -193,13 +213,15 @@
     margin: 1px 0; 
     }
 
-.btblouc{display: flex;
+.btblouc{
+    display: flex;
     justify-content: left;
-    margin: 32px 18px 6px;
+    margin: 32px auto 6px;
     position: relative;
     top: 0;
-   
-    padding-bottom: 11px;}
+    padding-bottom: 11px;
+    width: 357px;
+    }
 .iframe{    width: 100%;
     height: 260px;
     border: none;
@@ -295,7 +317,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(-800%);
   }
 }
 	
