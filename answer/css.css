@@ -121,6 +121,7 @@
             height: 90%;
             border-radius: 12px;
             box-shadow: 0 0 27px #035c7a;
+            position: relative;
          }  
 #question-text{
    text-align: center;
@@ -138,7 +139,7 @@
     position: absolute;
     text-align: center;
     width: 150px;
-    left: 410px;
+    left: 260px;
     height: 81px;
     text-shadow: 0 0 5px #25ee0d;
     }
