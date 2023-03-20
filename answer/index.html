@@ -22,17 +22,19 @@
                 // window.location.href="移动端url";
                
                 //判断访问环境是 移动端 则加载以下样式
-                setStyle(['css-m.css']);
+                setStyle(['css-m.css?2023']);
             }
             else {
                 // window.location.href="pc端url"; 
                
-				setStyle(['css.css']);
+				setStyle(['css.css?2023']);
             }
         }
         goPAGE();        // 调用function
 
 </script>
+
+
 
 
      <script>
@@ -273,36 +275,14 @@
   input.value = ""; // clear the input value
 }
 
- //收藏网页
-
-function bookmarkPage() {
-  // 这个函数会尝试调用浏览器的收藏功能
-  // 如果浏览器不支持这个功能，会提示用户按Ctrl+D手动收藏
-  var url = window.location.href; // 获取当前网址
-  var title = document.title; // 获取当前网页标题
-  try {
-    // 尝试使用window.sidebar或window.external对象来添加书签
-    if (window.sidebar && window.sidebar.addPanel) {
-      // Firefox支持这种方式
-      window.sidebar.addPanel(title, url, "");
-    } else if (window.external && ('AddFavorite' in window.external)) {
-      // IE支持这种方式
-      window.external.AddFavorite(url, title);
-    } else if (window.opera && window.print) {
-      // Opera支持这种方式
-      this.title = title;
-      return true;
-    } else {
-      // 其他浏览器不支持这种方式，提示用户按Ctrl+D手动收藏
-      alert('Please press Ctrl+D to add to favorites');
-    }
-  } catch (e) {
-    // 如果出现错误，也提示用户按Ctrl+D手动收藏
-    alert('Please press Ctrl+D to add to favorites');
-  }
-}
-
-
+ //设置时间
+     function  getD1(){
+         var date=new Date();
+         var d1=date.toLocaleString();
+         document.getElementById("datetime").innerHTML =d1; 
+     }
+ 
+     setInterval("getD1();",1000);
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Answer of Book</title></head>
 <body style="
@@ -310,7 +290,7 @@ function bookmarkPage() {
 ">
      
     <div class="container">
-	    <button id="bookmark-button" onClick="bookmarkPage()">+ Add</button>
+	   <div id="datetime">/div>
         <div class="title" ><h1 class="neon">BOOK OF ANSWERS</h1></div>
 		<div class="input-box">
             <div class="inputbox_in"><input id="input" class="inputstyle" type="text" placeholder="Enter your question sincerely..." onClick="clearErrorMessage()"><button id="clear" onClick="clearInput()">X</button></div><div class="error-message" id="error"></div>
@@ -362,19 +342,60 @@ function bookmarkPage() {
 			  
 			  
 			  <div class="iframe">
-			  <div class="hotrecom">Hot Products Recommendation:</div>
+			  <div class="hotrecom">Hot Recommendation:</div>
 			  	<div class="scroll-container">
-				  <a href="https://www.digistore24.com/redir/454376/samlawer/" target="_blank">⚡Easiest way to lose weight⚡</a>
-				  <a href="https://www.digistore24.com/redir/439299/samlawer/" target="_blank">Mass Muscle Building in Minutes</a>
-				  <a href="https://www.digistore24.com/redir/441346/samlawer/" target="_blank">Superior Muscle Growth</a>
-				  <a href="https://www.digistore24.com/redir/283755/samlawer/" target="_blank">The Ultimate Keto Meal Plan</a>
-				  <a href="https://www.digistore24.com/redir/299134/samlawer/" target="_blank">Tube Mastery and Monetization by Matt Par</a>
-				  <a href="https://www.digistore24.com/redir/413488/samlawer/" target="_blank">Primal Grow Pro - Top Male Enhancement Solution</a>
-				  <a href="https://www.digistore24.com/redir/307885/samlawer/" target="_blank">Smart Blood Sugar</a>
-				  <a href="https://www.digistore24.com/redir/330639/samlawer/" target="_blank">Another Killer Fat Loss Masterpiece Geared Towards Women</a>
-				  <a href="https://www.digistore24.com/redir/448909/samlawer/" target="_blank">EMFDEFENSE™ Negative Ions Sticker</a>
+				
+				  <a href="https://www.digistore24.com/redir/384216/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_435527/image/product/9IPRMOXP">
+					  <h2> 🌹Relationship 💏 Rewrite Method 📕</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/454376/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_1818218/image/product/WZG2U94D">
+					  <h2>⚡Easiest way to lose weight⚡</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/439299/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_1380290/image/product/SF5PJIK5">
+					  <h2>💪Mass Muscle Building in Minutes</h2>
+				  </a>
+				  
+					  <a href="https://www.digistore24.com/redir/441346/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_1671903/image/product/36WJGAD6">
+				  <h2>💪Superior Muscle Growth</h2></a>
+				  
+				  <a href="https://www.digistore24.com/redir/283755/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_95669/image/product/U83YZEV8">
+					  <h2>🍉The Ultimate Keto Meal Plan</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/299134/samlawer/" target="_blank">
+					  <img src="https://www.digistore24.com/pb/webinc/d7e137d7/images/brand/digistore/defaults/product_thumb.png">
+					  <h2>🏆 Tube Mastery and Monetization by Matt Par</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/413488/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_1323418/image/product/A08GNAB1">
+					  <h2>Primal Grow Pro - Top Male Enhancement Solution</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/307885/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_454456/image/product/HNI1E8GI">
+					  <h2>Smart Blood Sugar</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/330639/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_542761/image/product/7JAHLZ3U">
+					  <h2>🧘 Another Killer Fat Loss Masterpiece Geared Towards Women</h2>
+				  </a>
+				  
+				  <a href="https://www.digistore24.com/redir/448909/samlawer/" target="_blank">
+					  <img src="https://www.digistore24-app.com/pb/img/merchant_771978/image/product/K5BVYL5J">
+					  <h2>EMFDEFENSE™ Negative Ions Sticker</h2>
+				  </a>
 				 
 				</div>
+				<span class="more" >👆 swipe down for more exciting</span>
 			  <!--<iframe id="iframe" style="width:300px; height:300px ; border:none;" src="https://sites.google.com/view/godanswers/my-answer/recom"></iframe>--> 
 				</div>
          </div>  

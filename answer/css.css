@@ -222,8 +222,9 @@
     padding-bottom: 11px;
     width: 357px;
     }
-.iframe{    width: 100%;
-    height: 260px;
+.iframe{
+    width: 100%;
+    height: 366px;
     border: none;
     position: relative;
     overflow: hidden;
@@ -244,15 +245,20 @@
     padding: 0;
     line-height: 99px;
     }
-#bookmark-button{ position: absolute;
-    right: 10px;
+#datetime{
+    position: absolute;
+    right: 1px;
     top: 10px;
-    width: 52px;
-    border: 1px solid #f8af4c;
+    width: 157px;
     background: none;
-    color: #faaa3d;
-    border-radius: 5px;}
-	
+    color: #0f835e;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    line-height: 28px;
+    text-align: right;
+    }
+
 	
 	
 .child {
@@ -282,32 +288,81 @@
   background-color: pink;}	
   
   
-.hotrecom{height: 38px;
-    line-height: 32px;
-    color: #9d9b9b; }  
+.hotrecom{
+    height: 38px;
+    line-height: 44px;
+    color: #9d9b9b;
+    }  
   .scroll-container {
-   height: 240px;
-    overflow: hidden;
-    width: 90%;
-    flex-direction: column;
+   height: 299px;
+   overflow-y: scroll;
+   width: 670px;
+   flex-direction: column;
+}
+
+
+.scroll-container::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 12px;/*高宽分别对应横竖滚动条的尺寸*/
+        height: 9px;
+}
+.scroll-container::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius:5px;
+        -webkit-box-shadow: inset005pxrgba(0,0,0,0.2);
+        background: rgb(186 186 186 / 37%);  /*设置滚动条颜色*/
+        cursor: pointer;
+}
+.scroll-container::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset005pxrgba(0,0,0,0.2);
+        border-radius: 9px;
+        background: rgb(54 54 54 / 51%);
 }
   
-  .scroll-container a {animation: scroll 30s infinite linear;
-    display: inline-block;
-    float: left; font-size:17px;
-    text-decoration: none;
-    border: 1px solid #344e4e;
-    margin: 7px 5px 7px 0;
-    border-radius: 5px;
-    height: 32px; overflow:hidden;
-    line-height: 32px;
-    padding: 3px 13px;
-    background: #000000;
-    color: #fefefe;
-    text-shadow: 0 0 9px #69f2e8; font-family: 'Poiret One', cursive;}
-	
-
-
+  
+  .scroll-container a {
+   /*animation: scroll 30s infinite linear;*/
+   display: inline-block;
+   float: left;
+   font-size:17px;
+   text-decoration: none;
+   border: 1px solid #344e4e;
+   margin: 8px 4px 3px 0;
+   border-radius: 5px;
+   overflow:hidden;
+   line-height: 32px;
+   padding: 3px 8px;
+   background: #000000;
+   color: #fefefe;
+   height: 93px;
+   width: 298px;
+   text-shadow: 0 0 9px #69f2e8;
+   overflow: hidden;
+   font-family: 'Poiret One', cursive;
+   padding-bottom: 4px;
+   }
+	 .scroll-container a img {
+    width: 100px;
+    display: block;
+    margin-top: 5px;
+    float: left;
+}
+	 .scroll-container a h2{
+    display: block;
+    width: 155px;
+    font-size: 19px;
+    padding-left: 20px;
+    line-height: 30px;
+    float: left;
+    margin-top: 8px;
+}
+.more{
+    font-size: 13px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 39px;
+    color: #679d70;
+    height: 29px;
+    }
 @keyframes scroll {
   0% {
     transform: translateY(0);
