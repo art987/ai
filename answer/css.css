@@ -1,0 +1,285 @@
+﻿	body{ 
+	background-size: 242px; 
+	background-repeat: no-repeat; background-color: #000;background-position: -32px 16px;padding: 0 10px;}
+	
+	
+
+	
+	.neon {
+  font-family: 'Metal Mania', cursive;
+  color: #FB4264;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+	
+	.neon b { letter-spacing:6px;}
+	.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+	
+	
+	
+	
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-top: 16px;
+        }
+
+        .input-box {
+            margin: 10px;
+            width: 100%;
+            position: relative; 
+        }
+
+        .button-box {
+            margin: 10px 0;
+        }
+
+        .answer-button {
+          background-color: #e41313;
+    color: white;
+    padding: 9px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    text-shadow: 0 0 8px #fff100;
+        }
+.answer-button:hover{ background:#CC0000; color:#fff;}
+        .question-button {      background-color: #ededed00;
+   
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 17px;
+    margin-bottom: 17px;
+    font-size: 15px;
+    border: 1px solid #454545;
+    cursor: pointer;
+    color: #cfcfcf;
+    line-height: 24px;
+        }
+		.question-button:hover{  background-color: #ededed10;}
+
+        .error-message {
+            color: red;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    width: 100%;
+        }
+
+        .modal {
+               display: none;
+               position: fixed;
+               z-index: 1;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               overflow: auto;
+               background-color: #000000bd;
+               padding-top: 40px;
+               margin: 0;
+         }  
+
+         .modal-content {
+            background-color: #131313;
+    margin: auto;
+    border: 1px dotted #3ea668;
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 27px #035c7a;
+         }  
+#question-text{margin: 30px 30px 5px;
+   
+    color: #fff;
+    text-shadow: 0 0 9px #69f2e8;line-height: 26px;
+    font-size: 17px;}
+#timer-text{margin: 5px 30px 10px;
+    font-size: 15px;
+    color: #44f424;
+    line-height: 61px;
+    position: absolute;
+    height: 81px;
+    text-shadow: 0 0 5px #25ee0d;}
+#answer-text{margin: 7px 30px 10px;font-size: 34px;line-height: 40px;position: relative;top: 0px;height: 63px; font-family: 'Metal Mania', cursive;animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;}
+         .close {  
+    color: #aaa;
+    float: right;
+    font-size: 31px;
+    font-weight: bold;
+    margin-right: 1px;
+    padding: 1px 10px;
+         }  
+
+         .close:hover ,.close:focus {  
+             color : black ;  
+             text-decoration : none ;  
+             cursor:pointer;   
+         }  
+
+         .answer-text {
+             font-size:x-large ;
+         }
+
+         .timer-text {
+             
+         }
+
+         .another-answer-button {background-color: #9e1010cf;
+    color: #f8f8f8;
+    padding: 12px 6px;
+    border: 1px solid #a91010;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 21px;
+    cursor: pointer;
+    font-family: 'Metal Mania', cursive;
+    text-shadow: 0 0 8px #da0000;
+    }
+           .another-answer-question {    background-color: #0f1417;
+    color: #03adff;
+    padding: 3px 9px;
+    border: 1px solid #104c69;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Metal Mania', cursive;
+    text-shadow: 0 0 8px #1ad5ff;
+    }
+         .inputstyle{
+    height: 42px; color:#000;
+    border: none;
+    border-radius: 6px;
+    width: 91%;
+    text-indent:10px;
+    font-size:16px;
+    float: left;
+    display: block;
+    margin: 1px 0; 
+    }
+
+.btblouc{display: flex;
+    justify-content: left;
+    margin: 32px 18px 6px;
+    position: relative;
+    top: 0;
+   
+    padding-bottom: 11px;}
+.iframe{    width: 100%;
+    height: 260px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    left: 20px;
+    }
+#iframe { width:400px; height:200px; }
+.inputbox_in{width:100%;border: 1px solid #ccc;border-radius: 5px;height: 45px;position: relative;    background: #fff;}
+#clear{background:none;border:none;font-size:18px;width: 35px;display: block;height: 45px;position: absolute;right: 5px;}
+.title{color: #b7ff39;
+    height: 142px;
+    padding-left: 10px;
+    width: 100%;}
+.title h1 {    font-size: 32px; letter-spacing:2px;
+    padding: 0;
+    line-height: 175px;}
+#bookmark-button{ position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 52px;
+    border: 1px solid #f8af4c;
+    background: none;
+    color: #faaa3d;
+    border-radius: 5px;}
+	
+	
+	
+.child {
+  width: inherit;
+  height: inherit;
+  display: none; /* 默认隐藏所有子区块 */
+}
+
+/* 给每个子区块不同的背景颜色 */
+#child1 {
+  background-color: red;
+}
+
+#child2 {
+  background-color: green;
+}
+
+#child3 {
+  background-color: blue;
+}
+
+#child4 {
+  background-color: yellow;
+}
+
+#child5 {
+  background-color: pink;}	
+  
+  
+.hotrecom{height: 38px;
+    line-height: 32px;
+    color: #9d9b9b; }  
+  .scroll-container {
+   height: 240px;
+    overflow: hidden;
+    width: 90%;
+    flex-direction: column;
+}
+  
+  .scroll-container a {animation: scroll 30s infinite linear;
+    display: inline-block;
+    float: left; font-size:17px;
+    text-decoration: none;
+    border: 1px solid #344e4e;
+    margin: 7px 5px 7px 0;
+    border-radius: 5px;
+    height: 32px; overflow:hidden;
+    line-height: 32px;
+    padding: 3px 13px;
+    background: #000000;
+    color: #fefefe;
+    text-shadow: 0 0 9px #69f2e8; font-family: 'Poiret One', cursive;}
+	
+
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-800%);
+  }
+}
+	
+	
+	

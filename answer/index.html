@@ -1,0 +1,372 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pirata+One&family=Poiret+One&family=Special+Elite&display=swap" rel="stylesheet">
+<script type="text/javascript">
+        //根据设备加载不同的样式
+        var setStyle = function(cssArr){
+            var i= 0,len = cssArr.length;
+            for(i;i<len;i++){
+                document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+            }
+        };
+        // 判断是否移动端
+        function goPAGE() {
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                // window.location.href="移动端url";
+               
+                //判断访问环境是 移动端 则加载以下样式
+                setStyle(['css-m.css']);
+            }
+            else {
+                // window.location.href="pc端url"; 
+               
+				setStyle(['css.css']);
+            }
+        }
+        goPAGE();        // 调用function
+
+</script>
+
+
+     <script>
+         //定义一个数组，存储五条数据
+         var data = ["That’s it!","You need more information","You need to relax","You need to change your attitude","You need a plan","You need a partner","You need a new challenge","You need a vacation","Don’t hesitate, just do it!","Don’t worry, everything will be fine!","Don’t give up, keep going!","Don’t look back, look forward!","Don’t be too confident, stay humble!","Don’t be too cautious, be bold!","Don’t be too impulsive, calm down!","Don’t be too sensitive, relax!","Don’t be too stubborn, be flexible!","You can do better","You can give it a try","You can trust him/her","You can consult an expert","You can seek help","You should believe in yourself","You should trust your intuition","You should believe in fate","You should keep silent","You should tell the truth","You should apologize","You should forgive him/her","You should be grateful","You should learn new skills","You should read more books","Do it now!","Tell him/her now!","You will succeed","You will be happy","You will find true love","You will get a surprise","You will feel satisfied","You will gain friendship","You will learn a lot of things","You will achieve something","You will make a change","You will have a breakthrough","You will have a reward","You will make a contribution","You will be innovative","You will be inspired","You will grow up","You will enjoy yourself","You will be helpful","You will have an impact","You will have a choice","You will improve","You will discover something","You will show something","You will share something","You will express yourself","You will praise someone","You will encourage someone","You will be touched","You will appreciate something","You will trust someone","You will respect someone","You will understand someone","You will support someone","You will cooperate with someone","You will communicate with someone","You will listen to someone","You will agree with someone","You will reflect on yourself","You will change yourself","You will act on yourself"];
+        
+         //定义一个函数，获取输入框的值
+         function getInputValue() {
+
+          
+              return document.getElementById("input").value.trim();
+            
+  
+        
+      }
+      
+      //定义一个函数，设置输入框的值
+      function setInputValue(value) {
+
+           document.getElementById("input").value = value;
+
+      }
+      
+      //定义一个函数，显示错误信息
+      function showErrorMessage(message) {
+
+           document.getElementById("error").innerHTML = message;
+
+      }
+      
+      //定义一个函数，清除错误信息
+      function clearErrorMessage() {
+
+           document.getElementById("error").innerHTML = "";
+
+      }
+      
+      //定义一个函数，显示弹窗
+      function showModal() {
+
+           document.getElementById("modal").style.display = "block";
+
+      }
+      
+      //定义一个函数，隐藏弹窗
+      function hideModal() {
+
+           document.getElementById("modal").style.display = "none";
+
+      }
+ 
+     
+     
+     //定义一个函数，设置弹窗内容
+     function setModalContent(question, answer) {
+
+          document.getElementById("question-text").innerHTML = question;
+
+          document.getElementById("answer-text").innerHTML = answer;
+		  
+		 // var iframe = document.getElementById("iframe"); iframe.src = iframe.src; // refresh the iframe
+
+     }
+     
+     //定义一个函数，获取随机数
+     function getRandomNumber(min, max) {
+
+          return Math.floor(Math.random() * (max - min +1)) + min;
+
+     }
+     
+     //定义一个函数，获取随机答案
+     function getRandomAnswer() {
+
+          var index = getRandomNumber(0, data.length -1);
+
+          return data[index];
+
+     }
+      //定义一个函数，开始倒计时
+     function startTimer() {
+
+          var seconds = 5;
+
+          document.getElementById("timer-text").innerHTML = "searching..." + seconds + "sec";
+
+          var timer = setInterval(function() {
+
+               seconds--;
+
+               document.getElementById("timer-text").innerHTML = "searching..." + seconds + "sec";
+
+               if (seconds == 0) {
+
+                    clearInterval(timer);
+
+                    document.getElementById("timer-text").innerHTML = "";
+
+                    var answer = getRandomAnswer();
+
+                    setModalContent(getInputValue(), answer);
+
+               }
+
+          }, 1000);
+
+     }
+     
+     //定义一个函数，处理答案按钮的点击事件
+     function handleAnswerClick() {
+
+          var value = getInputValue();
+
+          if (value == "") {
+
+               showErrorMessage("Enter your question sincerely...");
+
+          } else {
+
+               clearErrorMessage();
+
+               showModal();
+
+               startTimer();
+
+          }
+
+     }
+     
+     //定义一个函数，处理问题按钮的点击事件
+     function handleQuestionClick(button) {
+
+         clearErrorMessage();
+          var value = button.innerHTML;
+
+          setInputValue(value);
+
+     }
+     
+     //定义一个函数，处理关闭按钮的点击事件
+     function handleCloseClick() {
+
+          hideModal();
+
+     }
+     
+     
+
+    
+    
+    //定义一个函数，处理再来一个答案按钮的点击事件
+    function handleAnotherAnswerClick() {
+         
+         startTimer();
+         
+    }
+    
+    //定义一个函数，处理问其它问题按钮的点击事件
+    function handleOtherQuestionClick() {
+         
+         hideModal();
+         
+         setInputValue("");
+         
+    }
+    
+	//定义一个函数，清除答案文本
+     function clearAnswerText() {
+
+          document.getElementById("answer-text").innerHTML = "";
+
+     }
+	 
+	 	//定义一个函数，清除问题文本
+     function clearquestionText() {
+
+          document.getElementById("question-text").innerHTML = "";
+
+     }
+     
+     //定义一个函数，处理再来一个答案按钮的点击事件
+     function handleAnotherAnswerClick() {
+         
+         clearAnswerText();
+      //   var iframe = document.getElementById("iframe"); iframe.src = iframe.src; // refresh the iframe
+         startTimer();
+         
+    }
+    
+    //定义一个函数，处理问其它问题按钮的点击事件
+    function handleOtherQuestionClick() {
+         
+         clearAnswerText();
+		 clearquestionText();
+
+         hideModal();
+         
+         setInputValue("");
+         
+    }
+
+    //定义一个函数，处理关闭按钮的点击事件
+    function handleCloseClick() {
+
+         clearAnswerText();
+          clearquestionText();
+         hideModal();
+
+    }
+	
+	
+//定义一个函数，处理答案按钮的点击事件
+     function handleAnswerClick() {
+
+          var value = getInputValue();
+
+          if (value == "") {
+
+               showErrorMessage("Enter your question sincerely...");
+
+          } else {
+
+               clearErrorMessage();
+
+               showModal();
+
+               setModalContent(value, ""); //设置问题文本，答案文本为空
+
+               startTimer();
+
+          }
+
+     }	
+	 
+	 //清空答案
+	 function clearInput() {
+  var input = document.getElementById("input");
+  input.value = ""; // clear the input value
+}
+
+ //收藏网页
+
+function bookmarkPage() {
+  // 这个函数会尝试调用浏览器的收藏功能
+  // 如果浏览器不支持这个功能，会提示用户按Ctrl+D手动收藏
+  var url = window.location.href; // 获取当前网址
+  var title = document.title; // 获取当前网页标题
+  try {
+    // 尝试使用window.sidebar或window.external对象来添加书签
+    if (window.sidebar && window.sidebar.addPanel) {
+      // Firefox支持这种方式
+      window.sidebar.addPanel(title, url, "");
+    } else if (window.external && ('AddFavorite' in window.external)) {
+      // IE支持这种方式
+      window.external.AddFavorite(url, title);
+    } else if (window.opera && window.print) {
+      // Opera支持这种方式
+      this.title = title;
+      return true;
+    } else {
+      // 其他浏览器不支持这种方式，提示用户按Ctrl+D手动收藏
+      alert('Please press Ctrl+D to add to favorites');
+    }
+  } catch (e) {
+    // 如果出现错误，也提示用户按Ctrl+D手动收藏
+    alert('Please press Ctrl+D to add to favorites');
+  }
+}
+
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Answer of Book</title></head>
+<body style="
+    background-image: url(https://media.discordapp.net/attachments/1078278202885148766/1086893184191307836/booksir33_by_Louis_Comfort_Tiffany_An_ancient_and_mysterious_bo_446d7c76-69dc-413e-ad16-865be150681a.png);
+">
+     
+    <div class="container">
+	    <button id="bookmark-button" onClick="bookmarkPage()">+ Add</button>
+        <div class="title" ><h1 class="neon">BOOK OF ANSWERS</h1></div>
+		<div class="input-box">
+            <div class="inputbox_in"><input id="input" class="inputstyle" type="text" placeholder="Enter your question sincerely..." onClick="clearErrorMessage()"><button id="clear" onClick="clearInput()">X</button></div><div class="error-message" id="error"></div>
+            <button class="answer-button" onClick="handleAnswerClick()">Ask For an Answer</button>
+        </div>
+        
+        <div class="button-box">
+		    <button class="question-button" onClick="handleQuestionClick(this)">how is my luck today？</button>
+            <button class="question-button" onClick="handleQuestionClick(this)">Am I destined to meet true love?</button>
+            <button class="question-button" onClick="handleQuestionClick(this)">will my work go well？</button>
+            <button class="question-button" onClick="handleQuestionClick(this)">what is the future of my career？</button>
+			 <button class="question-button" onClick="handleQuestionClick(this)">Will I be able to pass the exam？</button>
+			  <button class="question-button" onClick="handleQuestionClick(this)">Will my financial situation get better?</button>
+        </div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div id="modal" class="modal" style="display: none;">  
+        <!-- 弹窗内容 -->  
+        <div class="modal-content">  
+             <!-- 关闭按钮 -->  
+             <span class="close" onClick="handleCloseClick()"> × </span>  
+             <!-- 问题文本 -->  
+             <p id="question-text"></p>  
+             <!-- 倒计时文本 -->  
+             <p id="timer-text"></p> 
+             <!-- 答案文本 --> 
+             <p id="answer-text"></p> 
+             <!-- 底部按钮 -->
+             <div class="btblouc"> 
+                  <!-- 再来一个答案按钮 -->
+                  <button class="another-answer-button"  onclick="handleAnotherAnswerClick()">Another Answer</button> 
+                  <!-- 问其它问题按钮 -->
+                  <button class="another-answer-question" onClick="handleOtherQuestionClick()">Another Question</button> 
+              </div> 
+			  
+			  
+			  <div class="iframe">
+			  <div class="hotrecom">Hot Products Recommendation:</div>
+			  	<div class="scroll-container">
+				  <a href="https://www.digistore24.com/redir/454376/samlawer/" target="_blank">⚡Easiest way to lose weight⚡</a>
+				  <a href="https://www.digistore24.com/redir/439299/samlawer/" target="_blank">Mass Muscle Building in Minutes</a>
+				  <a href="https://www.digistore24.com/redir/441346/samlawer/" target="_blank">Superior Muscle Growth</a>
+				  <a href="https://www.digistore24.com/redir/283755/samlawer/" target="_blank">The Ultimate Keto Meal Plan</a>
+				  <a href="https://www.digistore24.com/redir/299134/samlawer/" target="_blank">Tube Mastery and Monetization by Matt Par</a>
+				  <a href="https://www.digistore24.com/redir/413488/samlawer/" target="_blank">Primal Grow Pro - Top Male Enhancement Solution</a>
+				  <a href="https://www.digistore24.com/redir/307885/samlawer/" target="_blank">Smart Blood Sugar</a>
+				  <a href="https://www.digistore24.com/redir/330639/samlawer/" target="_blank">Another Killer Fat Loss Masterpiece Geared Towards Women</a>
+				  <a href="https://www.digistore24.com/redir/448909/samlawer/" target="_blank">EMFDEFENSE™ Negative Ions Sticker</a>
+				 
+				</div>
+			  <!--<iframe id="iframe" style="width:300px; height:300px ; border:none;" src="https://sites.google.com/view/godanswers/my-answer/recom"></iframe>--> 
+				</div>
+         </div>  
+   </div>  
+
+
+
+</body></html>
