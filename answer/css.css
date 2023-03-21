@@ -58,7 +58,7 @@
         }
 
         .answer-button {
-          background-color: #e41313;
+          background-color: #ac0404;
           color: white;
           padding: 9px 11px;
           cursor: pointer;
@@ -75,7 +75,7 @@
           top: -10px;
           height: 46px;
         }
-.answer-button:hover{ background:#dc0000; color:#fff;}
+.answer-button:hover{ background-color: #ff0000; color:#fff;}
         .question-button {
    background-color: #0606069e;
    padding: 5px 10px;
@@ -193,6 +193,7 @@
     font-family: 'Metal Mania', cursive;
     text-shadow: 0 0 8px #da0000;
     }
+	.another-answer-button:hover{ background:#ff0000cf;}
            .another-answer-question {
     background-color: #0f1417;
     padding: 3px 15px;

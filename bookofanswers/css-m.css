@@ -219,6 +219,7 @@ line-height: 24px;
     font-family: 'Poiret One', cursive;
     text-shadow: 0 0 8px #ff4505;
     }
+	.another-answer-button:hover{background-color: #f70909;color: #fdfdfd;}
            .another-answer-question {
     background-color: #0f141700;
     color: #fd0404;

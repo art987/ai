@@ -192,6 +192,7 @@
     cursor: pointer;
     text-shadow: 0 0 8px #da0000;    font-family: 'wz', cursive;
     }
+	.another-answer-button:hover{ background:#ff0000cf;}
            .another-answer-question {
     background-color: #0f1417;    font-family: 'wz', cursive;
     padding: 3px 15px;
@@ -202,6 +203,8 @@
     cursor: pointer;
     text-shadow: 0 0 8px #1ad5ff;
     }
+	
+	
          .inputstyle{
     height: 42px;
     color: #ff3800;
