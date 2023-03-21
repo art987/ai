@@ -92,7 +92,7 @@ text-shadow: 0 0 8px #ce4646;
 
         .question-button {
    
-/* animation: scroll2 75s infinite linear; */
+
    
 overflow:hidden;
    
@@ -135,16 +135,21 @@ color: #0eeaff;
     border: 1px solid #076e6b;
     box-shadow: 0 0 8px #007d74;}
 		
-			@keyframes scroll2 {
+			@keyframes fade {
 			  0% {
-				transform: translateY(0);
+				transform: opacity: 0.1;
+				
 			  }
 			  
 			
 			  100% {
-				transform: translateY(-2150%);
+				transform: opacity: 1;;
 			  }
 			}
+		
+		
+		
+		
 		
 
         .error-message {
@@ -179,7 +184,7 @@ color: #0eeaff;
             border-radius: 12px;
             box-shadow: 0 0 27px #26465e;
          }  
-#question-text{margin: 30px 30px 5px;    font-family: 'Special Elite', cursive;
+#question-text{margin: 30px 30px 5px;    font-family: 'Special Elite';
    
     color: #fff;
     text-shadow: 0 0 9px #69f2e8;line-height: 26px;
