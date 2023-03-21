@@ -38,7 +38,6 @@
   
 
      <script>
-	   document.body.addEventListener("touchstart", function() {}); 
 
          //定义一个数组，存储五条数据
          var data = ["That’s it!","You need more information","You need to relax","You need to change your attitude","You need a plan","You need a partner","You need a new challenge","You need a vacation","Don’t hesitate, just do it!","Don’t worry, everything will be fine!","Don’t give up, keep going!","Don’t look back, look forward!","Don’t be too confident, stay humble!","Don’t be too cautious, be bold!","Don’t be too impulsive, calm down!","Don’t be too sensitive, relax!","Don’t be too stubborn, be flexible!","You can do better","You can give it a try","You can trust him/her","You can consult an expert","You can seek help","You should believe in yourself","You should trust your intuition","You should believe in fate","You should keep silent","You should tell the truth","You should apologize","You should forgive him/her","You should be grateful","You should learn new skills","You should read more books","Do it now!","Tell him/her now!","You will succeed","You will be happy","You will find true love","You will get a surprise","You will feel satisfied","You will gain friendship","You will learn a lot of things","You will achieve something","You will make a change","You will have a breakthrough","You will have a reward","You will make a contribution","You will be innovative","You will be inspired","You will grow up","You will enjoy yourself","You will be helpful","You will have an impact","You will have a choice","You will improve","You will discover something","You will show something","You will share something","You will express yourself","You will praise someone","You will encourage someone","You will be touched","You will appreciate something","You will trust someone","You will respect someone","You will understand someone","You will support someone","You will cooperate with someone","You will communicate with someone","You will listen to someone","You will agree with someone","You will reflect on yourself","You will change yourself","You will act on yourself"];
@@ -293,6 +292,15 @@
 		<div class="input-box">
             <div class="inputbox_in"><input id="input" class="inputstyle" type="text" placeholder="Enter your question sincerely..." onClick="clearErrorMessage()"><button id="clear" onClick="clearInput()">X</button></div><div class="error-message" id="error"></div>
             <button class="answer-button" onClick="handleAnswerClick()">Ask For an Answer</button>
+			 <script>
+		var btn=document.querySelector(".answer-button");
+		btn.ontouchstart=function(){
+			this.className="answer-button answer-button-on";
+		}
+		btn.ontouchend=function(){
+			this.className="answer-button";
+		}
+		</script>
         </div>
         
         <div class="button-box">
@@ -314,6 +322,15 @@
 			  <button class="question-button" onClick="handleQuestionClick(this)">Are he/she and I suitable for each other?</button>
 			  <button class="question-button" onClick="handleQuestionClick(this)">Will I receive news of promotion or raise?</button>
 			  <button class="question-button" onClick="handleQuestionClick(this)">Should I trust him/her?</button>
+			  <script>
+		var btn=document.querySelector(".question-button");
+		btn.ontouchstart=function(){
+			this.className="question-buttonn question-button-on";
+		}
+		btn.ontouchend=function(){
+			this.className="question-button";
+		}
+		</script>
         </div>
     </div>
 

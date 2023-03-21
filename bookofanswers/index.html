@@ -288,6 +288,15 @@
 		<div class="input-box">
             <div class="inputbox_in"><input id="input" class="inputstyle" type="text" placeholder="诚心输入您的问题..." onClick="clearErrorMessage()"><button id="clear" onClick="clearInput()">X</button></div><div class="error-message" id="error"></div>
             <button class="answer-button" onClick="handleAnswerClick()">问答案</button>
+			<script>
+		var btn=document.querySelector(".answer-button");
+		btn.ontouchstart=function(){
+			this.className="answer-button answer-button-on";
+		}
+		btn.ontouchend=function(){
+			this.className="answer-button";
+		}
+		</script>
         </div>
         
         <div class="button-box">
@@ -308,6 +317,15 @@
 			 <button class="question-button" onClick="handleQuestionClick(this)">我会赢得这场比赛吗？</button>
 			 <button class="question-button" onClick="handleQuestionClick(this)">他/她和我适合吗？</button>
 			 <button class="question-button" onClick="handleQuestionClick(this)">我会收到晋升或加薪的消息吗？</button>
+			  <script>
+		var btn=document.querySelector(".question-button");
+		btn.ontouchstart=function(){
+			this.className="question-buttonn question-button-on";
+		}
+		btn.ontouchend=function(){
+			this.className="question-button";
+		}
+		</script>
         </div>
     </div>
 
@@ -330,6 +348,15 @@
                   <!-- 问其它问题按钮 -->
                   <button class="another-answer-question"  onClick="handleOtherQuestionClick()">重新提问</button> 
 				  <div id="popup">前三答案更接近.</div>
+				   <script>
+		var btn=document.querySelector(".another-answer-button");
+		btn.ontouchstart=function(){
+			this.className="another-answer-button another-answer-button-on";
+		}
+		btn.ontouchend=function(){
+			this.className="another-answer-button";
+		}
+		</script>
 				  
               </div> 
 			  
