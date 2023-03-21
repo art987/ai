@@ -87,7 +87,7 @@ font-family: 'Poiret One', cursive;
 		
 text-shadow: 0 0 8px #ce4646;
 }
-.answer-button:hover{ background:#CC0000; color:#fff;}
+.answer-button:hover{ background:#f80404f7; color:#fff;}
         .question-button {
    
 /* animation: scroll2 75s infinite linear; */
