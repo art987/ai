@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	html{ height:100%;}
+	body{ height:100%;}
+		.left {
+			float: left;
+			width: 20%;
+			height: 100%;
+			background-color: #f0f0f0;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.right {
+			float: left;
+			width: 80%;
+			height: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		a {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="left">
+    <a href="https://www.bing.com">Bing</a>
+    <a href="https://universe142857.github.io/sm/pose.html">Google</a>
+    <a href="https://shimo.im/sheets/4NqQChnudoUUBZ95/Bi0cL">Yahoo</a>
+    <a href="https://v.douyin.com/A6kPGLQ/">Baidu</a>
+    <a href="https://shimo.im/docs/Wr3DVZeXdyc9rOkJ">Sogou</a>
+</div>
+<div class="right" style="height:100%">
+    <iframe id="myIframe" src=""  style="height:100%" ></iframe>
+</div>
+
+<script type="text/javascript">
+	var links = document.querySelectorAll('.left a');
+	var iframe = document.querySelector('#myIframe');
+
+	for (var i = 0; i < links.length; i++) {
+	    links[i].addEventListener('click', function(e) {
+	        e.preventDefault();
+	        iframe.src = this.href;
+	    });
+	}
+</script>
+
+</body>
+</html>

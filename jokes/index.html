@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>讲个笑话</title>
+    <style>
+      /* 模态框样式 */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      /* 模态框内容样式 */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* 打字机动画效果 */
+      .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        animation: typing 5s steps(30, end);
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* 段落样式 */
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+  <body>
+    <button onclick="showJoke()">讲个笑话</button>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="joke-content"></div>
+        <button onclick="showJoke()">再来一个</button>
+        <div id="image-parent">
+          <div id="image-1" class="image"></div>
+          <div id="image-2" class="image"></div>
+          <div id="image-3" class="image"></div>
+          <div id="image-4" class="image"></div>
+          <div id="image-5" class="image"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+     
+ // 笑话数组
+      var jokes = [
+        {
+          title: "笑话1",
+          content: [
+            "这是笑话1的第一段。",
+            "这是笑话1的第二段。",
+            "这是笑话1的第三段。"
+          ]
+        },
+        {
+          title: "笑话2",
+          content: [
+            "这是笑话2的第一段。",
+            "这是笑话2的第二段。",
+            "这是笑话2的第三段。"
+          ]
+        },
+        {
+          title: "笑话3",
+          content: [
+            "这是笑话3的第一段。",
+            "这是笑话3的第二段。",
+            "这是笑话3的第三段。"
+          ]
+        },
+        {
+          title: "笑话4",
+          content: [
+            "这是笑话4的第一段。",
+            "这是笑话4的的第二段。",
+        "这是笑话4的第三段。"
+      ]
+    },
+    {
+      title: "笑话5",
+      content: [
+        "这是笑话5的第一段。",
+        "这是笑话5的第二段。",
+        "这是笑话5的第三段。"
+      ]
+    }
+  ];
+  
+
+  // 随机选择笑话
+  
+  var selectedJoke = null;
+
+  function selectJoke() {
+    var availableJokes = jokes.filter(function (joke) {
+      return joke != selectedJoke;
+    });
+    selectedJoke = availableJokes[Math.floor(Math.random() * availableJokes.length)];
+  }
+
+  // 获取要显示的段落
+  var currentParagraph = 0;
+
+  function getNextParagraph() {
+    var paragraph = selectedJoke.content[currentParagraph];
+    currentParagraph++;
+    if (currentParagraph >= selectedJoke.content.length) {
+      currentParagraph = 0;
+    }
+    return paragraph;
+  }
+
+  // 显示笑话
+  function showJoke() {
+    selectJoke();
+
+    // 检查是否已经展示了所有笑话
+    if (selectedJoke == null) {
+      alert("你真棒，所有故事都看完了");
+      return;
+    }
+
+    // 打开模态框
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    // 获取模态框中的元素
+    var jokeContent = document.getElementById("joke-content");
+    var images = document.getElementsByClassName("image");
+
+    // 重置段落计数器
+    currentParagraph = 0;
+
+    // 等待3秒钟后开始展示笑话
+    setTimeout(function () {
+      // 清空笑话内容和图片
+      jokeContent.innerHTML = "";
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
+      }
+
+      // 显示笑话的标题
+      var title = document.createElement("h2");
+      title.innerHTML = selectedJoke.title;
+      jokeContent.appendChild(title);
+
+      // 逐字展示笑话
+      var interval = setInterval(function () {
+        var paragraph = getNextParagraph();
+        if (paragraph) {
+          var p = document.createElement("p");
+          p.className = "typewriter";
+          p.innerHTML = paragraph;
+          jokeContent.appendChild(p);
+        } else {
+          clearInterval(interval);
+        }
+      }, 200);
+
+      // 显示图片
+      var imageIndex = currentParagraph % images.length;
+      images[imageIndex].style.display = "block";
+    }, 3000);
+  }
+
+  // 关闭模态框
+  var closeBtn = document.getElementsByClassName("close")[0];
+  var modal = document.getElementById("myModal");
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  
+  
+</script>
+ </body> </html>

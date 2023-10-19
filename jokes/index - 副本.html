@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>讲个笑话</title>
+	<style>
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		.modal-content {
+			background-color: #fefefe;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			max-width: 600px;
+			text-align: center;
+			position: relative;
+		}
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+		#parent{}
+	#parent .child{ display:none;}
+	</style>
+</head>
+<body>
+	<button onClick="openModal()">讲个笑话</button>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close" onClick="closeModal()">&times;</span>
+			<p id="joke"></p>
+			<button onClick="showNext()">再来一个</button>
+			<div id="parent">
+				<div class="child">1</div>
+				<div class="child">2</div>
+				<div class="child">3</div>
+				<div class="child">4</div>
+				<div class="child">5</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 数据库中的笑话
+		var jokes = [
+			"为什么要扔小孩子？</br>>答：不扔小孩子，大人都不能好好睡觉。",
+			"什么动物很小，但拖东西特别快？<br>答：蜗牛。",
+			"为什么警察抓不到盗贼？</br>>答：因为警察一直在派出所，盗贼一直在拖走。",
+			"什么飞起来比掉下去更容易？<br>答：气球。",
+			"什么东西头在下面脚在上面？<br>答：袜子。"
+		];
+
+		// 当前
+	var currentJokeIndex = -1;
+
+	// 打字机效果速度
+	var typingSpeed = 200;
+
+	// 获取页面元素
+	var modal = document.getElementById("myModal");
+	var jokeElem = document.getElementById("joke");
+	var parentElem = document.getElementById("parent");
+	var childElems = document.getElementsByClassName("child");
+
+	// 打开模态框
+	function openModal() {
+		// 选择下一个笑话
+		var nextJokeIndex = chooseNextJokeIndex();
+		if (nextJokeIndex === -1) {
+			alert("你真棒，所有笑话都看完了！");
+			return;
+		}
+		currentJokeIndex = nextJokeIndex;
+
+		// 显示模态框
+		modal.style.display = "block";
+
+		// 展示笑话
+		showJoke();
+	}
+
+	// 关闭模态框
+	function closeModal() {
+		modal.style.display = "none";
+	}
+
+	// 选择下一个笑话的索引
+	function chooseNextJokeIndex() {
+		// 找到还没有展示过的笑话的索引
+		var unshownJokeIndexes = [];
+		for (var i = 0; i < jokes.length; i++) {
+			if (i !== currentJokeIndex) {
+				unshownJokeIndexes.push(i);
+			}
+		}
+
+		// 如果所有笑话都展示过了，返回-1
+		if (unshownJokeIndexes.length === 0) {
+			return -1;
+		}
+
+		// 随机选择一个笑话的索引
+		var randomIndex = Math.floor(Math.random() * unshownJokeIndexes.length);
+		return unshownJokeIndexes[randomIndex];
+	}
+
+	// 展示笑话
+	function showJoke() {
+		// 获取当前笑话的文本
+		var jokeText = jokes[currentJokeIndex];
+
+		// 清空笑话元素的内容
+		jokeElem.innerHTML = "";
+
+		// 逐字展示笑话
+		var index = 0;
+		var timer = setInterval(function() {
+			if (index < jokeText.length) {
+				jokeElem.innerHTML += jokeText.charAt(index);
+				index++;
+			} else {
+				clearInterval(timer);
+			}
+		}, typingSpeed);
+	}
+
+	// 展示下一个笑话
+	function showNext() {
+		// 选择下一个笑话
+		var nextJokeIndex = chooseNextJokeIndex();
+		if (nextJokeIndex === -1) {
+			alert("你真棒，所有笑话都看完了！");
+			closeModal();
+			return;
+		}
+		currentJokeIndex = nextJokeIndex;
+
+		// 展示笑话
+		showJoke();
+
+		// 选择下一个子元素
+		var nextChildIndex = (currentJokeIndex % childElems.length);
+		for (var i = 0; i < childElems.length; i++) {
+			if (i === nextChildIndex) {
+				childElems[i].style.display = "block";
+			} else {
+				childElems[i].style.display = "none";
+			}
+		}
+	}
+</script>
