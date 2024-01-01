@@ -27,7 +27,7 @@ function showGallery() {
   galleryDiv.style.display = "block";
 
   for (let i = 1; i <= 10; i++) {
-    const videoUrl = `video${i}.mp4`;
+    const videoUrl = `${i}.mp4`;
 
     const videoBox = document.createElement("div");
     videoBox.classList.add("vbox");
