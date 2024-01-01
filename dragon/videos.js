@@ -27,16 +27,17 @@ function showGallery() {
   galleryDiv.style.display = "block";
 
   for (let i = 1; i <= 10; i++) {
-    const videoUrl = `${i}.mp4`;
+    const videoUrl = `video${i}.mp4`;
 
     const videoBox = document.createElement("div");
     videoBox.classList.add("vbox");
 
     const videoElement = document.createElement("video");
     videoElement.src = videoUrl;
-  
+    videoElement.setAttribute("controls", "controls"); // Show default video controls
     videoElement.setAttribute("autoplay", "autoplay"); // Start playing immediately
     videoElement.setAttribute("loop", "loop"); // Loop the video
+    videoElement.setAttribute("playsinline", "true"); // Play inline on iOS
     videoElement.preload = "metadata"; // Load metadata for seeking
     videoBox.appendChild(videoElement);
 
@@ -49,7 +50,7 @@ function showGallery() {
     videoBox.appendChild(playButton);
 
     const downloadButton = document.createElement("button");
-    downloadButton.textContent = "保存动态壁纸";
+    downloadButton.textContent = "保存视频";
     downloadButton.classList.add("vd");
     downloadButton.addEventListener("click", function() {
       downloadVideo(videoUrl);
