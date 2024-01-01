@@ -1,0 +1,116 @@
+@charset "utf-8";
+body {
+      padding:20px 10px;
+      text-align: center;
+      background: url("https://www.toptal.com/designers/subtlepatterns/uploads/tileable_wood_texture.png");
+      font-family: Arial, sans-serif;
+    }
+	
+	/*ȡͼ��������ڣ��뵽�����˶Ի���ѯ�����ͷ�*/
+	
+	
+	h1{
+    font-size: 20px;
+    padding: 0;
+    line-height: 19px;
+    color: #000;
+    text-shadow: 1px 1px #ffffff;
+}
+	h5{
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    text-indent: 23px;
+    color: #db4900;
+    text-shadow: 1px 1px #ffffff7d;
+}
+    #gallery {
+      display: none;
+    }
+    #password-input {
+      margin-top: 23px;
+    }
+    #errorMessage {
+      color: red;
+      line-height: 25px;
+      padding: 0 31px;
+    }
+	#gallery  img {
+      display: block;
+      width: 88%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      margin: 0 auto;
+      border-radius: 10px; background:#000;
+    }
+		#gallery  video {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+      border-radius: 39px;
+      border: 2px solid #040000;
+      box-shadow: 3px 7px 0px #000000;
+    }
+	#gallery  button {
+	
+	    display: block;
+    border: 1px solid #950a0a;
+    background: #c00;
+    color: #fff;
+    height: 41px;
+    border-radius: 11px;
+    margin: 10px auto 33px;
+    width: 300px;
+}
+	
+	
+	.lable{
+    display: block;
+    line-height: 21px;
+    padding-bottom: 8px;
+    color: #000;
+    text-shadow: 1px 1px #ffffff7d;
+}
+	.pinput{
+      display: block;
+    margin: 0 auto;
+    width: 127px;
+    font-size: 25px;
+    border: 1px solid #222;
+    letter-spacing: 15px;
+    text-align: center;
+
+}
+	.checkbtn{
+    display: block;
+    height: 35px;
+    margin: 10px auto;
+    width: 132px;
+    background: #cf0000;
+    border: none;
+    color: #ffffff;
+    font-size: 17px;
+    text-shadow: 1px 1px #930202;
+}
+.vbox{
+    /* background: #000; */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    width: 88%;
+    margin: 0 auto 10px;
+    /* border: 2px solid #450000; */
+}
+#gallery .vplay{
+    margin-right: 10px;
+    width: 82px;
+    float: left;
+    margin-top: 21px;
+    margin-bottom: 15px;
+}
+#gallery .vd{
+    width: 206px;
+    float: left;
+    margin-top: 21px;
+    margin-bottom: 15px;
+}
