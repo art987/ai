@@ -53,7 +53,7 @@ function showGallery() {
     downloadButton.textContent = "保存视频";
     downloadButton.classList.add("vd");
     downloadButton.addEventListener("click", function() {
-      downloadVideo(videoUrl);
+      downloadVideo(videoUrl, downloadButton);
     });
     videoBox.appendChild(downloadButton);
 
@@ -61,13 +61,30 @@ function showGallery() {
   }
 }
 
-function downloadVideo(videoUrl) {
+function downloadVideo(videoUrl, downloadButton) {
   const link = document.createElement("a");
   link.href = videoUrl;
   link.download = "video.mp4";
 
-  // Open a new window/tab for the download
-  window.open(link.href, '_blank');
+  // Check if it's an iOS device
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+  if (isIOS) {
+    // On iOS, use Clipboard API to simulate a click
+    const tempInput = document.createElement("input");
+    tempInput.setAttribute("value", videoUrl);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    alert("已保存到相册！");
+  } else {
+    // On other devices, use the download attribute
+    link.click();
+    downloadButton.textContent = "已保存";
+    alert("已保存到相册！");
+  }
 }
 
 function togglePlayPause(video, button) {
