@@ -26,7 +26,7 @@ const correctPassword = "8861"; // Set your desired password
     document.getElementById("password-input").style.display = "none";
     galleryDiv.style.display = "block";
 
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 21; i++) {
       const imageUrl = `${String(i).padStart(2, '0')}.png`;
 
       const imgElement = document.createElement("img");
